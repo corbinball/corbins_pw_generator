@@ -41,7 +41,7 @@ function generatePassword() {
   var getSpecial;
   var choices;
 
-  var userChoice = prompt ("Please choose a password length between 8-128 characters.");
+  var userChoice = prompt ("How long do you want it? (8-128 characters");
     if (userChoice < 8 || userChoice > 128) {
       userChoice = parseInt(alert ("You gotta choose a number between 8-128."));
 }     else if (userChoice >= 8 || userChoice <= 128) {
