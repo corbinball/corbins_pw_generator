@@ -43,7 +43,7 @@ function generatePassword() {
 
   var userChoice = prompt ("How long do you want it? (8-128 characters");
     if (userChoice < 8 || userChoice > 128) {
-      userChoice = parseInt(alert ("You gotta choose a number between 8-128."));
+      userChoice = parseInt(alert ("No, No, No. You gotta choose a number between 8-128."));
 }     else if (userChoice >= 8 || userChoice <= 128) {
         console.log(userChoice);
         getLower =  confirm("Do you want lower case letters?");
