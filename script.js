@@ -3,24 +3,13 @@ var generateBtn = document.querySelector("#generate");
 //input variables
 
 
-
 // Write password to the #password input
 function writePassword() {
   
-
-
  var password = generatePassword();
  var passwordText = document.querySelector("#password");
 
-  //!prompt number of characters
-  //!get value from that prompt
-  //!promt whether to include speical characters
-  //! if ok, add special characters
-  //!Math.floor(Math.random() * arr[confrimedTrues].length)
-
-
   passwordText.value = password;
-
 };
 
 function generatePassword() {
@@ -72,3 +61,8 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // hint: console.log(Math.floor(Math.random() * alpha.length))
+  //prompt number of characters-check
+  //get value from that prompt-check
+  //promt whether to include speical characters-check
+  // if ok, add special characters-check
+  //!Math.floor(Math.random() * arr[confrimedTrues].length)
