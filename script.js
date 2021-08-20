@@ -19,58 +19,64 @@ function generatePassword() {
   var number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
   var confrimedTrues = [];
-  var userChoice;
+  var pwLength;
   var enter; 
   var pwLength;
-  var password;
   var getLength;
   var getLower;
   var getUpper;
   var getNumber;
   var getSpecial;
   var choices;
+  var makePw;
 
-  var userChoice = prompt ("How long do you want it? (8-128 characters");
-    if (userChoice < 8 || userChoice > 128) {
-      userChoice = parseInt(alert ("No, No, No. You gotta choose a number between 8-128."));
-      generatePassword();
-}     else if (userChoice >= 8 || userChoice <= 128) {
-        console.log(userChoice); }
+    var pwLength = window.prompt ("How long do you want it? (8-128 characters");
+    if (pwLength < 8 || pwLength > 128) {
+        pwLength = parseInt(alert ("No, No, No. You gotta choose a number between 8-128."));
+        generatePassword();
+}          else if (pwLength >= 8 || pwLength <= 128) {
+            console.log(pwLength); 
+
+};
 
         getLower =  confirm("How bout lower case letters in your password?");
         console.log(getLower);
-        if (getLower === true); {
-            confrimedTrues += confrimedTrues.concat(alpha);
-            console.log(confrimedTrues);
-}       
+            if (getLower === true); {
+                confrimedTrues = confrimedTrues.concat(alpha);
+                console.log(confrimedTrues);
+};             
 
 
         getUpper = confirm("Ok cool. Do you want upper case letters in your password?");
         console.log(getUpper);
-        if (getUpper === true); {
-            confrimedTrues += confrimedTrues.concat(alphaUpper);
-            console.log(confrimedTrues);
-        };
+            if (getUpper === true); {
+                confrimedTrues += confrimedTrues.concat(alphaUpper);
+                console.log(confrimedTrues);
+};
 
         
         getNumber = confirm("Ok cool, cool. Do you want numbers in your password?");
         console.log(getNumber);
-        if (getNumber === true); {
-            confrimedTrues += (confrimedTrues.concat(number));
-            console.log(confrimedTrues);
-        };
+            if (getNumber === true); {
+                confrimedTrues += (confrimedTrues.concat(number));
+                console.log(confrimedTrues);
+};
 
         getSpecial = confirm("Alright cool. Finally, do you want special characters in your password?");
         console.log(getSpecial);
-        if (getSpecial === true); {
-            confrimedTrues += (confrimedTrues.concat(special));
-            console.log(confrimedTrues);
-        }
+            if (getSpecial === true); {
+             confrimedTrues += (confrimedTrues.concat(special));
+                console.log(confrimedTrues);
+};
 
     if (!getLower && !getUpper && !getNumber && !getSpecial) {
       choices = alert("I can't work with that! Sorry but, you'll have to try again.");
 }   
-    
+    if (getLower && getUpper & getNumber && getNumber) {
+        makePw = Math.floor(Math.random() + confrimedTrues.pwLength);
+        generatePassword = confrimedTrues[makePw];
+        console.log(generatePassword);
+    };
 };
 
 
