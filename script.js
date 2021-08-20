@@ -33,28 +33,46 @@ function generatePassword() {
   var userChoice = prompt ("How long do you want it? (8-128 characters");
     if (userChoice < 8 || userChoice > 128) {
       userChoice = parseInt(alert ("No, No, No. You gotta choose a number between 8-128."));
+      generatePassword();
 }     else if (userChoice >= 8 || userChoice <= 128) {
-        console.log(userChoice);
+        console.log(userChoice); }
+
         getLower =  confirm("How bout lower case letters in your password?");
         console.log(getLower);
+        if (getLower === true); {
+            confrimedTrues += confrimedTrues.concat(alpha);
+            console.log(confrimedTrues);
+}       
 
 
         getUpper = confirm("Ok cool. Do you want upper case letters in your password?");
         console.log(getUpper);
+        if (getUpper === true); {
+            confrimedTrues += confrimedTrues.concat(alphaUpper);
+            console.log(confrimedTrues);
+        };
 
         
         getNumber = confirm("Ok cool, cool. Do you want numbers in your password?");
         console.log(getNumber);
+        if (getNumber === true); {
+            confrimedTrues += (confrimedTrues.concat(number));
+            console.log(confrimedTrues);
+        };
 
         getSpecial = confirm("Alright cool. Finally, do you want special characters in your password?");
         console.log(getSpecial);
-};
+        if (getSpecial === true); {
+            confrimedTrues += (confrimedTrues.concat(special));
+            console.log(confrimedTrues);
+        }
 
     if (!getLower && !getUpper && !getNumber && !getSpecial) {
       choices = alert("I can't work with that! Sorry but, you'll have to try again.");
 }   
     
-}
+};
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
