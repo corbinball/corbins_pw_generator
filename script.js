@@ -32,7 +32,7 @@ function generatePassword() {
   var confrimedTrues = [];
   var userChoice;
   var enter; 
-  var passwordLength;
+  var pwLength;
   var password;
   var getLength;
   var getLower;
