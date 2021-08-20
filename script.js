@@ -46,18 +46,18 @@ function generatePassword() {
       userChoice = parseInt(alert ("No, No, No. You gotta choose a number between 8-128."));
 }     else if (userChoice >= 8 || userChoice <= 128) {
         console.log(userChoice);
-        getLower =  confirm("Do you want lower case letters?");
+        getLower =  confirm("How bout lower case letters in your password?");
         console.log(getLower);
 
 
-        getUpper = confirm("Do you want upper case letters?");
+        getUpper = confirm("Ok cool. Do you want upper case letters in your password?");
         console.log(getUpper);
 
         
-        getNumber = confirm("Do you want numbers?");
+        getNumber = confirm("Ok cool, cool. Do you want numbers in your password?");
         console.log(getNumber);
 
-        getSpecial = confirm("Do you want special characters?");
+        getSpecial = confirm("Alright cool. Finally, do you want special characters in your password?");
         console.log(getSpecial);
 };
 
