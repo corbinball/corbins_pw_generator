@@ -62,7 +62,7 @@ function generatePassword() {
 };
 
     if (!getLower && !getUpper && !getNumber && !getSpecial) {
-      choices = alert("I can't work with that! Please try again.");
+      choices = alert("I can't work with that! Sorry but, you'll have to try again.");
 }   
     
 }
