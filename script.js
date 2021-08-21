@@ -18,7 +18,7 @@ function generatePassword() {
   var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
   var number = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
   var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~",];
-  var confrimedTrues = [];
+  var confirmedTrues = [];
   var pwLength;
   var enter; 
   var pwLength;
@@ -42,8 +42,8 @@ function generatePassword() {
     getLower =  confirm("How bout lower case letters in your password?");
     console.log(getLower);
     if (getLower) {
-        confrimedTrues = confrimedTrues.concat(alpha);
-        console.log(confrimedTrues);
+        confirmedTrues = confirmedTrues.concat(alpha);
+        console.log(confirmedTrues);
     }
                  
 
@@ -51,31 +51,34 @@ function generatePassword() {
     getUpper = confirm("Ok cool. Do you want upper case letters in your password?");
     console.log(getUpper);
     if (getUpper) {
-        confrimedTrues = confrimedTrues.concat(alphaUpper);
-        console.log(confrimedTrues);
+        confirmedTrues = confirmedTrues.concat(alphaUpper);
+        console.log(confirmedTrues);
 };
 
         
     getNumber = confirm("Ok cool, cool. Do you want numbers in your password?");
     console.log(getNumber);
     if (getNumber) {
-        confrimedTrues = (confrimedTrues.concat(number));
-        console.log(confrimedTrues);
+        confirmedTrues = (confirmedTrues.concat(number));
+        console.log(confirmedTrues);
 };
 
     getSpecial = confirm("Alright cool. Finally, do you want special characters in your password?");
     console.log(getSpecial);
     if (getSpecial) {
-        confrimedTrues = (confrimedTrues.concat(special));
-        console.log(confrimedTrues);
+        confirmedTrues = (confirmedTrues.concat(special));
+        console.log(confirmedTrues);
     }
-console.log(confrimedTrues);
+
+ 
+    for (i = 0; i < pwLength; i++); 
+    enter = confirmedTrues[Math.floor(Math.random() + confirmedTrues.pwLength)];
+    
 
 
-    if (getLower && getUpper & getNumber && getNumber) {
-        generatePassword = Math.floor(Math.random() + confrimedTrues.pwLength);
-        console.log(generatePassword);
-};
+    
+
+    console.log(enter)
 
     if (!getLower && !getUpper && !getNumber && !getSpecial) {
       choices = alert("I can't work with that! Sorry but, you'll have to try again.");
@@ -94,4 +97,4 @@ generateBtn.addEventListener("click", writePassword);
   //get value from that prompt-check
   //promt whether to include speical characters-check
   // if ok, add special characters-check
-  //!Math.floor(Math.random() * arr[confrimedTrues].length)
+  //!Math.floor(Math.random() * arr[confirmedTrues].length)
