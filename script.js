@@ -16,7 +16,7 @@ function generatePassword() {
 
   var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
   var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
-  var number = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+  var number = ["1", "2", "3", "4", "5", "6", "7", "8", "9",];
   var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~",];
   var confirmedTrues = [];
   var pwLength;
@@ -71,19 +71,17 @@ function generatePassword() {
     }
 
  
-    for (i = 0; i < pwLength; i++); 
-    enter = confirmedTrues[Math.floor(Math.random() + confirmedTrues.pwLength)];
-    
+    for (i = 0; i < pwLength; i++) {
+    enter = confirmedTrues[Math.floor(Math.random() * confirmedTrues.length)]; 
+    console.log(enter);
+    };
 
 
-    
-
-    console.log(enter)
 
     if (!getLower && !getUpper && !getNumber && !getSpecial) {
       choices = alert("I can't work with that! Sorry but, you'll have to try again.");
 }   
-
+return enter
     };
 
 
