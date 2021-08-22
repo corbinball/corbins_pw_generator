@@ -20,9 +20,9 @@ function generatePassword() {
   var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~",];
   var confirmedTrues = [];
   var pwLength;
-  var enter; 
+  var enter = []; 
   var pwLength;
-  var getLength;
+  var thePassword;
   var getLower;
   var getUpper;
   var getNumber;
@@ -72,8 +72,10 @@ function generatePassword() {
 
  
     for (i = 0; i < pwLength; i++) {
-    enter = confirmedTrues[Math.floor(Math.random() * confirmedTrues.length)]; 
+    enter += confirmedTrues[Math.floor(Math.random() * confirmedTrues.length)]; 
     console.log(enter);
+
+
     };
 
 
@@ -81,6 +83,8 @@ function generatePassword() {
     if (!getLower && !getUpper && !getNumber && !getSpecial) {
       choices = alert("I can't work with that! Sorry but, you'll have to try again.");
 }   
+
+
 return enter
     };
 
